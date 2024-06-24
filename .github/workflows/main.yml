@@ -35,6 +35,10 @@ jobs:
         with:
           boost_version: 1.83.0
 
+      - name: Install other dependencies
+        run: |
+          vcpkg install jemalloc tbb
+
       - name: Install MSVC if under Windows
         uses: ilammy/msvc-dev-cmd@v1
 
