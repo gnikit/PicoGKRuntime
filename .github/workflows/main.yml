@@ -25,9 +25,9 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install CMake
-        run: |
-          python -m pip install cmake -U
+      # - name: Install CMake
+      #   run: |
+      #     python -m pip install cmake -U
 
       - name: Install Boost
         uses: MarkusJx/install-boost@v2.4.5
