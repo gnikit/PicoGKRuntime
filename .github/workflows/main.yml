@@ -42,6 +42,11 @@ jobs:
         run: |
           vcpkg install jemalloc tbb
 
+      - name: DEBUG
+        run: |
+          echo $BOOST_ROOT
+        shell: bash
+
       - name: Build PicoGK Runtime
         run: |
           cmake -B build
