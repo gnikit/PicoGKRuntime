@@ -45,7 +45,7 @@ jobs:
 
       - name: DEBUG
         run: |
-          echo $BOOST_ROOT
+          echo $VCPKG_ROOT
         shell: bash
 
       - name: Build PicoGK Runtime
