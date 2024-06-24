@@ -51,12 +51,6 @@ project(PicoGK VERSION ${LIB_VERSION})
 set(CMAKE_CXX_STANDARD 20)
 
 # Check for position independent executable support
-include(CheckPIESupported)
-check_pie_supported(OUTPUT_VARIABLE output LANGUAGES C CXX)
-if( NOT CMAKE_C_LINK_PIE_SUPPORTED or NOT CMAKE_CXX_LINK_PIE_SUPPORTED)
-  message(WARNING "PIE is not supported at link time: ${output}.\n"
-                  "PIE link options will not be passed to linker.")
-endif()
 set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
 
 # Set the output directory for the generated libraries and executables
