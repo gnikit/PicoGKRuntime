@@ -54,3 +54,4 @@ jobs:
           cmake --build build --config Release
         env:
           BOOST_ROOT: ${{ steps.install-boost.outputs.BOOST_ROOT }}
+          CMAKE_TOOLCHAIN_FILE: ${{ env.VCPKG_ROOT }}/scripts/buildsystems/vcpkg.cmake
