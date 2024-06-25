@@ -40,7 +40,7 @@ jobs:
 
       - name: Install other dependencies
         run: |
-          vckpg install jemalloc tbb
+          vcpkg install jemalloc tbb
           vcpkg integrate install
           echo "VCPKG_ROOT=$VCPKG_ROOT" >> $GITHUB_ENV
 
