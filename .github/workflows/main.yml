@@ -40,7 +40,8 @@ jobs:
 
       - name: Install other dependencies
         run: |
-          vcpkg integrate install jemalloc tbb
+          vckpg install jemalloc tbb
+          vcpkg integrate install
           echo "VCPKG_ROOT=$VCPKG_ROOT" >> $GITHUB_ENV
 
       - name: DEBUG
@@ -54,4 +55,3 @@ jobs:
           cmake --build build --config Release
         env:
           BOOST_ROOT: ${{ steps.install-boost.outputs.BOOST_ROOT }}
-          CMAKE_TOOLCHAIN_FILE: ${{ env.VCPKG_ROOT }}/scripts/buildsystems/vcpkg.cmake
