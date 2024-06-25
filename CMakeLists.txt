@@ -50,6 +50,9 @@ project(PicoGK VERSION ${LIB_VERSION})
 # Set the C++ standard to C++20 or higher
 set(CMAKE_CXX_STANDARD 20)
 
+# Check for position independent executable support
+set(CMAKE_POSITION_INDEPENDENT_CODE TRUE)
+
 # Set the output directory for the generated libraries and executables
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Dist)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/Lib)
